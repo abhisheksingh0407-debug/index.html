@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thank You ❤️</title>
+  <style>
+    body{
+      margin:0;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      background:linear-gradient(135deg,#8360c3,#2ebf91);
+      color:white;
+      font-family:Arial, sans-serif;
+      text-align:center;
+    }
+    .type{
+      font-size:22px;
+      width:80%;
+      min-height:60px;
+    }
+    button{
+      padding:15px 30px;
+      font-size:18px;
+      border:none;
+      border-radius:30px;
+      background:white;
+      color:#2ebf91;
+      cursor:pointer;
+      margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="type" id="text"></div>
+
+<button onclick="next()">One Last Page →</button>
+
+<script>
+  const msg = "Even when things felt wrong, you stayed. You never gave up on me. And for that, I’m forever grateful ❤️";
+  let i = 0;
+  function type(){
+    if(i < msg.length){
+      document.getElementById("text").innerHTML += msg.charAt(i);
+      i++;
+      setTimeout(type,60);
+    }
+  }
+  type();
+
+  function next(){
+    window.location.href = "page3.html";
+  }
+</script>
+
+</body>
+</html>
